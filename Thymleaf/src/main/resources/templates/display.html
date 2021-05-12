@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Welcome to data page</h3>
+<span th:text="${message}"></span>
+<table>
+<tr>
+<th>ID</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+</tr>
+<tr th:each="ob:${list}">
+<td th:text="${ob.empid}"></td>
+<td th:text="${ob.fname}"></td>
+<td th:text="${ob.lname}"></td>
+<td th:text="${ob.email}"></td>
+</tr>
+</table>
+</body>
+</html>
